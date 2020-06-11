@@ -26,6 +26,7 @@ Desarrollo
 2. Mostrando el cronómetro en pantalla
 
 
+3. Creando y mostrando los botones
 
 
 

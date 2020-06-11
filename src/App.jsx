@@ -4,9 +4,9 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     body{
-        background-color:#222;
-        color:#387EF5;
-        text-align:center;
+        background-color: #222;
+        color: #387EF5;
+        text-align: center;
     }
 `
 
