@@ -29,6 +29,8 @@ Desarrollo
 3. Creando y mostrando los botones
 
 
+4. Iniciando conteo del cronometro
+
 
 
 

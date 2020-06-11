@@ -24,12 +24,36 @@ class Chronometer extends Component {
 
     //Función que se llama con el boton start
     handleStartClick = () => {
-
+        if(!this.state.running){
+            this.interval = setInterval( () => {
+                this.tick()
+            }, 100)
+        }
     }
 
     //Conteo del cronómetro
     tick() {
+        let hours = this.state.hours
+        let minutes = this.state.minutes
+        let seconds = this.state.seconds
+        let miliseconds = this.state.miliseconds + 1
 
+        if (miliseconds === 10) {
+            miliseconds = 0
+            seconds = seconds + 1
+        }
+
+        if (seconds === 60) {
+            seconds = 0
+            minutes = minutes + 1
+        }
+
+        if (minutes === 60) {
+            minutes = 0
+            hours = hours + 1
+        }
+
+        this.updateTimer(hours, minutes, seconds, miliseconds)
     }
 
     //Función que se llama con el boton stop
@@ -48,8 +72,13 @@ class Chronometer extends Component {
     }
 
     //Función de actualización del estado
-    updateTimer(miliseconds, seconds, minutes, hours) {
-
+    updateTimer(hours, minutes, seconds, miliseconds) {
+        this.setState({
+            hours:hours,
+            minutes:minutes,
+            seconds:seconds,
+            miliseconds:miliseconds
+        })
     }
 
     addZero(value){
@@ -66,7 +95,7 @@ class Chronometer extends Component {
         return (
             <>
                 <h3>{`${hours} : ${minutes} : ${seconds} : ${miliseconds}`}</h3>
-                <Button disabled={running}> START </Button>
+                <Button disabled={running} onClick={this.handleStartClick}> START </Button>
                 <Button disabled={running}> STOP </Button>
                 <Button disabled={running}> TIME STAMP </Button>
                 <Button disabled={running}> RESET </Button>               
