@@ -22,16 +22,13 @@ Desarrollo
 
 1. Crear los estilos globales utilizando 'createGlobalStyle'
 
-
 2. Mostrando el cronómetro en pantalla
-
 
 3. Creando y mostrando los botones
 
-
 4. Iniciando conteo del cronometro
 
-
+5. Deteniendo el cronómetro
 
 
 
