@@ -23,6 +23,8 @@ Desarrollo
 1. Crear los estilos globales utilizando 'createGlobalStyle'
 
 
+2. Mostrando el cronómetro en pantalla
+
 
 
 
