@@ -19,7 +19,8 @@ class Chronometer extends Component {
         minutes: 0,
         seconds: 0,
         miliseconds: 0,
-        running: false
+        running: false,
+        allTimestamps: []
     }
 
     //Función que se llama con el boton start
@@ -68,12 +69,20 @@ class Chronometer extends Component {
 
     //Función que se llama con el boton timestamp
     handleTimestamp = () => {
+        const {hours, minutes, seconds, miliseconds, allTimestamps} = this.state
 
+        const timestamp = {hours, minutes, seconds, miliseconds}
+
+        const timestamps = allTimestamps
+
+        timestamps.push(timestamp)
+
+        this.setState({ allTimestamps: timestamps })
     }
 
     //Función que se llama con el boton reset
     handleReset = () => {
-
+        this.updateTimer(0, 0, 0, 0 )
     }
 
     //Función de actualización del estado
@@ -102,8 +111,8 @@ class Chronometer extends Component {
                 <h3>{`${hours} : ${minutes} : ${seconds} : ${miliseconds}`}</h3>
                 <Button disabled={running} onClick={this.handleStartClick}> START </Button>
                 <Button disabled={!running} onClick={this.handleStopClick}> STOP </Button>
-                <Button disabled={!running}> TIMESTAMP </Button>
-                <Button disabled={running}> RESET </Button>               
+                <Button disabled={!running} onClick={this.handleTimestamp}> TIMESTAMP </Button>
+                <Button disabled={running} onClick={this.handleReset}> RESET </Button>               
             </>
         )
     }

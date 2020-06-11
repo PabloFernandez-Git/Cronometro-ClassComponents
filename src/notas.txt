@@ -28,7 +28,7 @@ Desarrollo
 
 4. Iniciando conteo del cronometro
 
-5. Deteniendo el cronómetro
+5. Deteniendo el cronometro
 
-
+6. Reset y capturas de tiempo
 
