@@ -1,0 +1,32 @@
+Cronometro usando Class Components
+
+"Prologo": Importar las dependencias
+
+A. shortid
+Descargar la librería dentro de la carpeta del proyecto (usando npm):
+npm i shortid
+
+Importar la libreria al componente que necesite usarla.
+import {generate as id} from 'shortid';
+
+Utilizando {generate as id} podemos renombrar ‘generate’ y utilizar la palabra ‘id’ donde querramos usar esta función.
+Podemos renombrar funciones para darles nombres mas cómodos para nosotros.
+
+B. styled-components
+Instalar styled-components solo toma una simple linea de commando y ya estas listo para trabajar:
+npm i styled-components
+(Debemos ejecutar este comando dentro de la carpeta del proyecto)
+
+
+Desarrollo
+
+1. Crear los estilos globales utilizando 'createGlobalStyle'
+
+
+
+
+
+
+
+
+
