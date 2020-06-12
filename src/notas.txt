@@ -34,5 +34,6 @@ Desarrollo
 
 7. Mostrando los timestamps en pantalla
 
+8. Ultimos retoques
 
 
