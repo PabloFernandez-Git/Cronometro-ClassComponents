@@ -32,3 +32,7 @@ Desarrollo
 
 6. Reset y capturas de tiempo
 
+7. Mostrando los timestamps en pantalla
+
+
+
